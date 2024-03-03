@@ -12,6 +12,7 @@ class Paddle:
 
         self.rect.centerx += 50
         self.moving_up = False
+        self.moving_down = False
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
@@ -19,3 +20,7 @@ class Paddle:
     def update(self):
         if self.moving_up:
             self.rect.centery -= 1
+
+        if self.moving_down:
+            self.rect.centery += 1
+

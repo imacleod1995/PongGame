@@ -18,9 +18,13 @@ def run_game():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:
                     p1.moving_up = True
+                elif event.key == pygame.K_DOWN:
+                    p1.moving_down = True
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_UP:
                     p1.moving_up = False
+                elif event.key == pygame.K_DOWN:
+                    p1.moving_down = False
         p1.update()
         screen.fill(bg_color)
         p1.blitme()
