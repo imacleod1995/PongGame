@@ -25,7 +25,8 @@ class Ball(Sprite):
     def check_boundaries(self):
         if self.rect.bottom == self.screen.get_rect().bottom:
             self.dy = -1
-        elif self.rect.left == self.p1.rect.top:
+        elif self.rect.colliderect(self.p1.rect):
+            self.dy = 1
             self.dx = 1
         elif self.rect.top == self.screen.get_rect().top:
             self.dy = 1
