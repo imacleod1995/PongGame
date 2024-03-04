@@ -28,6 +28,7 @@ def run_game():
                 elif event.key == pygame.K_DOWN:
                     p1.moving_down = False
         p1.update()
+        p2.update(ball)
         ball.check_boundaries()
         ball.update()
         screen.fill(bg_color)

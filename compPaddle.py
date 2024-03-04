@@ -1,4 +1,6 @@
 import pygame
+import random
+
 
 class Computer():
     def __init__(self, screen):
@@ -10,6 +12,13 @@ class Computer():
         self.rect.midright = self.screen_rect.midright
 
         self.rect.centerx -= 50
+        self.move_up = False
+        self.move_down = False
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
+
+    def update(self, ball):
+        pass
+
+

@@ -28,11 +28,11 @@ class Ball(Sprite):
         elif self.rect.colliderect(self.p1.rect):
             self.dy = 1
             self.dx = 1
+        elif self.rect.colliderect(self.p2.rect):
+            self.dx = -1
+            self.dy = 1
         elif self.rect.top == self.screen.get_rect().top:
             self.dy = 1
-
-
-
 
     def draw_ball(self):
         pygame.draw.rect(self.screen, self.color, self.rect)
