@@ -19,6 +19,10 @@ class Computer():
         self.screen.blit(self.image, self.rect)
 
     def update(self, ball):
-        pass
+        if ball.x_moving_up and self.rect.top != self.screen_rect.top:
+            self.rect.centery -= 1
+        elif ball.x_moving_down and self.rect.bottom != self.screen_rect.bottom:
+            self.rect.centery += 1
+
 
 

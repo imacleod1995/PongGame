@@ -13,7 +13,8 @@ class Ball(Sprite):
         self.screen = screen
         self.dx = -1
         self.dy = -1
-        self.needs_reset = False
+        self.x_moving_down = True
+        self.x_moving_up = False
 
     def update(self):
         self.x += self.dx
@@ -25,12 +26,15 @@ class Ball(Sprite):
     def check_boundaries(self):
         if self.rect.bottom == self.screen.get_rect().bottom:
             self.dy = -1
+            self.x_moving_down = False
+            self.x_moving_up = True
         elif self.rect.colliderect(self.p1.rect):
             self.dy = 1
             self.dx = 1
         elif self.rect.colliderect(self.p2.rect):
             self.dx = -1
             self.dy = 1
+            self.x_moving_down = True
         elif self.rect.top == self.screen.get_rect().top:
             self.dy = 1
 
