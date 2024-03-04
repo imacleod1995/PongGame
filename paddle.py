@@ -18,9 +18,9 @@ class Paddle:
         self.screen.blit(self.image, self.rect)
 
     def update(self):
-        if self.moving_up:
+        if self.moving_up and self.rect.top != self.screen.get_rect().top:
             self.rect.centery -= 1
 
-        if self.moving_down:
+        if self.moving_down and self.rect.bottom != self.screen.get_rect().bottom:
             self.rect.centery += 1
 
