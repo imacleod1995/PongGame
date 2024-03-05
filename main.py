@@ -17,8 +17,8 @@ def run_game():
     text = font.render("Pong", True, (0, 0, 0))
     p1 = Paddle(screen)
     p2 = Computer(screen)
-    p1_text = font.render("Player 1 Score: {}".format(p1.score), True, (0, 0, 0))
-    p2_text = font.render("Player 2 Score: {}".format(p2.score), True, (0, 0, 0))
+    #p1_text = font.render("Player 1 Score: {}".format(p1.score), True, (0, 0, 0))
+    #p2_text = font.render("Player 2 Score: {}".format(p2.score), True, (0, 0, 0))
     ball = Ball(screen, p1, p2)
     while True:
         for event in pygame.event.get():
@@ -39,6 +39,8 @@ def run_game():
         ball.check_boundaries()
         ball.update()
         screen.fill(bg_color)
+        p1_text = font.render("Player 1 Score: {}".format(p1.score), True, (0, 0, 0))
+        p2_text = font.render("Player 2 Score: {}".format(p2.score), True, (0, 0, 0))
         screen.blit(p1_text, (150,10))
         screen.blit(p2_text, (1300, 10))
         p1.blitme()
