@@ -8,6 +8,7 @@ class Paddle:
         self.screen_rect = screen.get_rect()
         self.rect.centerx = self.screen_rect.centerx
         self.rect.midleft = self.screen_rect.midleft
+        self.score = 0
 
 
         self.rect.centerx += 50

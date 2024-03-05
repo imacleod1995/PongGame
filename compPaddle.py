@@ -14,6 +14,7 @@ class Computer():
         self.rect.centerx -= 50
         self.move_up = False
         self.move_down = False
+        self.score = 0
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
