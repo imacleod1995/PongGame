@@ -40,6 +40,8 @@ class Ball(Sprite):
         elif self.rect.left > self.screen.get_rect().right:
             #p1 scores
             self.p1.score += 1
+            self.x = 780
+            self.y = 480
 
     def draw_ball(self):
         pygame.draw.rect(self.screen, self.color, self.rect)
